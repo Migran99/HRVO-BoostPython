@@ -2,7 +2,7 @@
  * HRVO.h
  * HRVO Library
  *
- * Copyright (c) 2009-2013 University of North Carolina at Chapel Hill.
+ * Copyright (c) 2009-2014 University of North Carolina at Chapel Hill.
  * All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software and its
@@ -70,7 +70,7 @@
 /**
  * \mainpage   HRVO Library Documentation
  * \authors    Jamie Snape, Jur van den Berg, Stephen J. Guy, and Dinesh Manocha
- * \copyright  2009-2013 University of North Carolina at Chapel Hill. All rights reserved.
+ * \copyright  2009-2014 University of North Carolina at Chapel Hill. All rights reserved.
  * \details    We present the hybrid reciprocal velocity obstacle for collision-free and oscillation-free navigation of multiple mobile robots or virtual agents. Each robot or virtual agents senses its surroundings and acts independently without central coordination or communication with other robots or virtual agents. Our approach uses both the current position and the velocity of other robots or virtual agents to compute their future trajectories in order to avoid collisions. Moreover, our approach is reciprocal and avoids oscillations by explicitly taking into account that the other robots or virtual agents also sense their surroundings and change their trajectories accordingly.
  */
 

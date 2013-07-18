@@ -3,10 +3,10 @@ The Hybrid Reciprocal Velocity Obstacle
 
 <http://gamma.cs.unc.edu/HRVO/>
 
-Copyright &copy; 2009-2013 University of North Carolina at Chapel Hill. All
+Copyright &copy; 2009-2014 University of North Carolina at Chapel Hill. All
 rights reserved.
 
-[![Build Status](https://travis-ci.org/snape/HRVO.png?branch=master)](https://travis-ci.org/snape/HRVO)
+[![Build Status](https://travis-ci.org/HRVO/HRVO.png?branch=master)](https://travis-ci.org/HRVO/HRVO)
 
 We present the hybrid reciprocal velocity obstacle for collision-free and
 oscillation-free navigation of multiple mobile robots or virtual agents. Each

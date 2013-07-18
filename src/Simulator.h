@@ -2,7 +2,7 @@
  * Simulator.h
  * HRVO Library
  *
- * Copyright (c) 2009-2013 University of North Carolina at Chapel Hill.
+ * Copyright (c) 2009-2014 University of North Carolina at Chapel Hill.
  * All rights reserved.
  *
  * Permission to use, copy, modify, and distribute this software and its

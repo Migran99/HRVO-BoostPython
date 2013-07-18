@@ -1,5 +1,5 @@
 #
-# CMakeLists.txt
+# CTestConfig.cmake
 # HRVO Library
 #
 # Copyright (c) 2009-2014 University of North Carolina at Chapel Hill.
@@ -54,9 +54,10 @@
 # <http://gamma.cs.unc.edu/HRVO/>
 #
 
-cmake_minimum_required(VERSION 2.8)
-project(HRVO)
-add_subdirectory(src)
-include(CTest)
-add_subdirectory(examples)
-include(CPack)
+set(CTEST_PROJECT_NAME "HRVO")
+set(CTEST_NIGHTLY_START_TIME "01:00:00 UTC")
+
+set(CTEST_DROP_METHOD "http")
+set(CTEST_DROP_SITE "stormy-reaches-6995.herokuapp.com")
+set(CTEST_DROP_LOCATION "/submit.php?project=HRVO")
+set(CTEST_DROP_SITE_CDASH TRUE)

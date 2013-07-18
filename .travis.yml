@@ -5,6 +5,5 @@ compiler:
 script:
   - mkdir _build
   - cd _build
-  - cmake .. -DCMAKE_INSTALL_PREFIX=../_install
-  - cmake --build . --target install
-  - ctest -V .
+  - cmake ..
+  - ctest --extra-verbose --dashboard Experimental .
