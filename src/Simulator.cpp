@@ -100,7 +100,7 @@ namespace hrvo {
 		}
 	}
 
-	std::size_t Simulator::addAgent(const Vector2 &position, std::size_t goalNo)
+	std::size_t Simulator::addAgent0(const Vector2 &position, std::size_t goalNo)
 	{
 		if (defaults_ == NULL) {
 			throw std::runtime_error("Agent defaults not set when adding agent.");
@@ -112,7 +112,7 @@ namespace hrvo {
 		return agents_.size() - 1;
 	}
 
-	std::size_t Simulator::addAgent(const Vector2 &position, std::size_t goalNo, float neighborDist, std::size_t maxNeighbors, float radius, float goalRadius, float prefSpeed, float maxSpeed,
+	std::size_t Simulator::addAgent1(const Vector2 &position, std::size_t goalNo, float neighborDist, std::size_t maxNeighbors, float radius, float goalRadius, float prefSpeed, float maxSpeed,
 #if HRVO_DIFFERENTIAL_DRIVE
 		float timeToOrientation, float wheelTrack,
 #endif /* HRVO_DIFFERENTIAL_DRIVE */

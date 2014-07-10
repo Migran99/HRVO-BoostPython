@@ -59,7 +59,7 @@
  * \brief  Example with 250 agents navigating through a circular environment.
  */
 
-#define HRVO_OUTPUT_TIME_AND_POSITIONS 0
+#define HRVO_OUTPUT_TIME_AND_POSITIONS 1
 
 #include <cmath>
 
@@ -82,15 +82,19 @@ int main()
 
 	for (std::size_t i = 0; i < 250; ++i) {
 		const Vector2 position = 200.0f * Vector2(std::cos(0.004f * i * HRVO_TWO_PI), std::sin(0.004f * i * HRVO_TWO_PI));
-		simulator.addAgent(position, simulator.addGoal(-position));
+		simulator.addAgent0(position, simulator.addGoal(-position));
 	}
 
 	do {
 #if HRVO_OUTPUT_TIME_AND_POSITIONS
 		std::cout << simulator.getGlobalTime();
 
-		for (std::size_t i = 0; i < simulator.getNumAgents(); ++i) {
-			std::cout << " " << simulator.getAgentPosition(i);
+		// for (std::size_t i = 0; i < simulator.getNumAgents(); ++i) {
+		// 	std::cout << " " << simulator.getAgentPosition(i);
+		// }
+
+		for (std::size_t i = 0; i < 1; ++i) {
+			std::cout << "\t" << simulator.getAgentPosition(i);
 		}
 
 		std::cout << std::endl;
