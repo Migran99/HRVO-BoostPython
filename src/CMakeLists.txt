@@ -57,20 +57,33 @@
 set(HRVO_HEADERS
 	HRVO.h
 	Simulator.h
-	Vector2.h)
+	Vector2.h
+	Agent.h
+	Definitions.h
+	KdTree.h
+	Goal.h
+	)
 
 set(HRVO_SOURCES
 	Agent.cpp
-	Agent.h
-	Definitions.h
 	Goal.cpp
-	Goal.h
 	KdTree.cpp
-	KdTree.h
 	Simulator.cpp
 	Vector2.cpp)
 
-add_library(HRVO ${HRVO_HEADERS} ${HRVO_SOURCES})
+find_package(PythonLibs 3.8 REQUIRED)
+find_package(Boost COMPONENTS python REQUIRED)
+
+# Without this, any build libraries automatically have names "lib{x}.so"
+set(CMAKE_SHARED_MODULE_PREFIX "")
+set(CMAKE_SHARED_LIBRARY_PREFIX "")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
+add_library(HRVO SHARED ${HRVO_SOURCES})
+
+add_library(pyhrvo MODULE pyhrvo_module.cpp)
+target_link_libraries(pyhrvo HRVO ${Boost_LIBRARIES} ${PYTHON_LIBRARIES})
+target_include_directories(pyhrvo PRIVATE ${PYTHON_INCLUDE_DIRS})
 
 install(FILES ${HRVO_HEADERS} DESTINATION include)
 install(TARGETS HRVO DESTINATION lib)

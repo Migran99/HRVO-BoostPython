@@ -1,6 +1,4 @@
-#include <boost/python/class.hpp>
-#include <boost/python/module.hpp>
-#include <boost/python/def.hpp>
+#include <boost/python.hpp>
 #include "HRVO.h"
 #include "Vector2.h"
 #include "Goal.h"
